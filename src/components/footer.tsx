@@ -1,7 +1,9 @@
 export default function Footer() {
+  const THIS_YEAR = new Date().getFullYear();
+
   return (
-    <footer>
-      <p>2024</p>
+    <footer className="h-fit">
+      <p>&copy; {THIS_YEAR} Le Dinh Khoi</p>
     </footer>
   );
 }
