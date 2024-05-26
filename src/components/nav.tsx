@@ -27,7 +27,7 @@ export default function Nav() {
   }, [theme]);
 
   return (
-    <nav className="fixed w-full flex justify-between items-center p-4 backdrop-blur-lg bg-[#fafafa]/40 dark:bg-[#20202086]/40">
+    <nav className="fixed w-full flex justify-between items-center p-4 backdrop-blur-lg bg-[#fafafa]/40 dark:bg-[#20202086]/40 font-custom">
       <span className="flex items-center gap-2">
         <img src="/icon.svg" alt="Icon" width={30} height={30} />
         <h1>LeKo</h1>

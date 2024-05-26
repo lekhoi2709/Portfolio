@@ -44,9 +44,11 @@ const {
     <meta property="og:image" content={image} />
     <meta title={title} />
   </head>
-  <body class="max-w-screen min-h-screen dark:bg-dark-background bg-background">
+  <body
+    class="max-w-screen min-h-screen dark:bg-dark-background bg-background font-custom"
+  >
     <Nav client:load />
-    <section class="min-h-screen pt-16 px-4">
+    <section class="min-h-screen pt-20 px-4">
       <slot />
     </section>
     <Footer />
