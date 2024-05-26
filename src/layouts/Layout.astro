@@ -1,22 +1,29 @@
 ---
-import Nav from "../components/nav"
-import Footer from "../components/footer"
-const { title } = Astro.props
+import Nav from "../components/nav";
+import Footer from "../components/footer";
+
+const {
+  title,
+  description = "Le Dinh Khoi's Portfolio",
+  image = "/image/icon.jpg",
+} = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:image" content={image} />
     <meta title={title} />
   </head>
-  <body>
-    <main class="max-w-screen min-h-screen">
-      <Nav />
-      <section class="h-screen pt-16 px-4 bg-blue-300">
-        <slot />
-      </section>
-      <Footer />
-    </main>
+  <body class="max-w-screen min-h-screen">
+    <Nav />
+    <section class="min-h-screen pt-16 px-4 bg-blue-300">
+      <slot />
+    </section>
+    <Footer />
   </body>
 </html>
