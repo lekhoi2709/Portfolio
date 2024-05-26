@@ -1,15 +1,65 @@
+import Switch from "./switch";
+import { useState, useEffect } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { Button } from "./ui/button";
+import { Menu } from "lucide-react";
+
 export default function Nav() {
+  const [theme, setThemeState] = useState<boolean>(true);
+  const route = [
+    { name: "Home", href: "/" },
+    { name: "Works", href: "/works" },
+  ];
+
+  useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    setThemeState(isDarkMode);
+  }, []);
+
+  useEffect(() => {
+    const isDark = theme === true;
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+  }, [theme]);
+
   return (
-    <nav className="fixed bg-slate-400 w-full flex justify-between items-center p-4">
-      <h1>LeKo</h1>
-      <ul className="flex gap-4">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
+    <nav className="fixed w-full flex justify-between items-center p-4 backdrop-blur-lg bg-[#fafafa]/40 dark:bg-[#20202086]/40">
+      <span className="flex items-center gap-2">
+        <img src="/icon.svg" alt="Icon" width={30} height={30} />
+        <h1>LeKo</h1>
+      </span>
+      <ul className="md:flex gap-4 items-center hidden">
+        {route.map((item) => (
+          <li key={item.name}>
+            <a href={item.href}>{item.name}</a>
+          </li>
+        ))}
       </ul>
+      <div className="flex gap-4">
+        <Switch checked={theme} setChecked={setThemeState} />
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild className="md:hidden">
+            <Button className="px-3">
+              <Menu size={20} />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="end"
+            sideOffset={10}
+            className="dark: border-slate-700"
+          >
+            {route.map((item) => (
+              <DropdownMenuItem key={item.name}>
+                <a href={item.href}>{item.name}</a>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </nav>
   );
 }
