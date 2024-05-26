@@ -45,7 +45,7 @@ export default {
       },
       fontFamily: {
         custom: ["jetbrains-mono", ...defaultTheme.fontFamily.mono],
-        title: ["press-start-2p", ...defaultTheme.fontFamily.mono],
+        title: ["Press\\ Start\\ 2P", ...defaultTheme.fontFamily.mono],
       },
     },
   },
