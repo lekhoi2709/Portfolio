@@ -50,7 +50,7 @@ export default function Nav() {
           <DropdownMenuContent
             align="end"
             sideOffset={10}
-            className="dark: border-slate-700"
+            className="dark:border-slate-700 dark:bg-dark-background bg-background"
           >
             {route.map((item) => (
               <DropdownMenuItem key={item.name}>
