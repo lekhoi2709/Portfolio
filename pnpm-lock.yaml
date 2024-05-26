@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.0.21
         version: 5.0.21
+      '@fontsource/press-start-2p':
+        specifier: ^5.0.20
+        version: 5.0.20
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.0.6
         version: 2.0.6(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -566,6 +569,9 @@ packages:
 
   '@fontsource-variable/jetbrains-mono@5.0.21':
     resolution: {integrity: sha512-LL/57KBbM3r0UMuN6tSeYExiBObt0QuGq49m1FyoDFIv1GAcuKU0EQ/GAKJ/yt3R8onOCD3f5X9Dln//G6uzRQ==}
+
+  '@fontsource/press-start-2p@5.0.20':
+    resolution: {integrity: sha512-URkenVoJlx1wtmpY+zoMFWxftWmm1H3CJnrGwjoy1e5G+qTjJnctxDIXDs65mvluFmSPsFNaULA2CEQBOli+eQ==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -3183,6 +3189,8 @@ snapshots:
   '@floating-ui/utils@0.2.2': {}
 
   '@fontsource-variable/jetbrains-mono@5.0.21': {}
+
+  '@fontsource/press-start-2p@5.0.20': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:
