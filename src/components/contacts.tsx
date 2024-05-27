@@ -47,8 +47,8 @@ const FacebookIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
 
 export default function Contact() {
   return (
-    <div className="md:fixed md:bottom-0 md:px-12 flex flex-col gap-4 md:flex-row md:gap-0 justify-center md:justify-between md:items-end w-full">
-      <div className="flex md:flex-col gap-8 md:items-center h-full">
+    <div className="md:fixed md:bottom-0 md:px-12 flex flex-col gap-8 md:flex-row md:gap-0 justify-center md:justify-between md:items-end w-full">
+      <div className="flex md:flex-col gap-8 md:items-center justify-center h-full">
         <div className="flex md:flex-col gap-8">
           <a href="https://github.com/lekhoi2709">
             <GitHubIcon className="hover:fill-blue-500 focus:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200" />
