@@ -1,6 +1,9 @@
 export default function About() {
   return (
-    <section className="w-full h-screen flex flex-col gap-4 md:gap-8 items-center justify-center">
+    <section
+      id="about"
+      className="w-full h-screen flex flex-col gap-4 md:gap-8 items-center justify-center"
+    >
       <div className="flex gap-16 items-center">
         <h1 className="text-center text-2xl md:text-3xl font-title font-bold">
           About me
@@ -29,7 +32,7 @@ export default function About() {
             I am proficient in a variety of programming languages and
             frameworks, including HTML, CSS, JavaScript, and React. I am also
             familiar with back-end technologies such as Node.js and databases
-            like MongoDB. I
+            like MongoDB. I{" "}
             <span className="text-blue-500">
               enjoy solving complex problems
             </span>{" "}

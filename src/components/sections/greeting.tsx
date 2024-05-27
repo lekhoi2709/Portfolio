@@ -1,6 +1,9 @@
 export default function Greeting() {
   return (
-    <section className="w-full h-screen flex flex-col gap-4 md:gap-8 items-center justify-center">
+    <section
+      id="greeting"
+      className="w-full h-screen flex flex-col gap-4 md:gap-8 items-center justify-center"
+    >
       <div className="w-full max-w-[800px] text-left flex flex-col gap-4">
         <p className="text-blue-500 font-title text-xs">Hello, my name is</p>
         <h1 className="md:text-6xl text-4xl">LE DINH KHOI.</h1>
