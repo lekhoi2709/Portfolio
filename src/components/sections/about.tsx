@@ -1,23 +1,18 @@
 export default function About() {
   return (
     <section className="w-full h-screen flex flex-col gap-4 md:gap-8 items-center justify-center">
-      <h1 className="text-center text-2xl md:text-3xl font-title font-bold">
-        About me
-      </h1>
-      <div className="md:w-[600px] flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between">
-        <div>
-          <h2 className="font-bold text-xl">Le Dinh Khoi</h2>
-          <p className="">Web Developer</p>
-        </div>
+      <div className="flex gap-16 items-center">
+        <h1 className="text-center text-2xl md:text-3xl font-title font-bold">
+          About me
+        </h1>
         <img
           src="/avatar.jpg"
           alt="LDK"
           className="w-24 h-24 rounded-full border-2 border-white"
         />
       </div>
-      <div className="flex flex-col md:flex-row gap-2 md:gap-8 w-full">
-        <div className="md:w-1/3"></div>
-        <div className="w-full text-sm md:text-base md:w-2/3 md:max-w-[600px] bg-[#F6F6F6] dark:bg-[#2B2B2B] p-4 rounded-lg">
+      <div className="flex flex-col md:flex-row w-full items-center justify-center">
+        <div className="w-full text-sm md:text-base md:max-w-[600px] bg-[#F6F6F6] dark:bg-[#2B2B2B] p-4 rounded-lg">
           <p>
             Hello! My name is Khoi, and I am{" "}
             <span className="text-blue-500">a passionate web developer</span>{" "}
