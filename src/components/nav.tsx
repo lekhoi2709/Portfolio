@@ -1,13 +1,6 @@
 import Switch from "./switch";
 import { useState, useEffect } from "react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
+import NavDrawer from "./nav-drawer";
 
 export default function Nav() {
   const [theme, setThemeState] = useState<boolean>(true);
@@ -41,24 +34,7 @@ export default function Nav() {
       </ul>
       <div className="flex gap-4">
         <Switch checked={theme} setChecked={setThemeState} />
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild className="md:hidden">
-            <Button className="px-3">
-              <Menu size={20} />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent
-            align="end"
-            sideOffset={10}
-            className="dark:border-slate-700 dark:bg-dark-background bg-background"
-          >
-            {route.map((item) => (
-              <DropdownMenuItem key={item.name}>
-                <a href={item.href}>{item.name}</a>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <NavDrawer />
       </div>
     </nav>
   );

@@ -48,7 +48,7 @@ const {
   <body
     class="max-w-screen min-h-screen dark:bg-dark-background bg-background font-custom relative"
   >
-    <Nav client:load />
+    <Nav client:only="react" />
     <main class="min-h-screen px-4">
       <slot />
     </main>
