@@ -3,7 +3,9 @@ export default function Footer() {
 
   return (
     <footer className="h-fit p-4 font-custom flex items-center justify-center">
-      <p>&copy; {THIS_YEAR} Le Dinh Khoi</p>
+      <p className="text-xs text-slate-500">
+        {THIS_YEAR} Built by Le Dinh Khoi
+      </p>
     </footer>
   );
 }
