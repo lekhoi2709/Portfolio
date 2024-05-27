@@ -1,11 +1,12 @@
 ---
 import Nav from "../components/nav";
 import Footer from "../components/footer";
+import Contact from "@/components/contacts";
 
 const {
   title,
   description = "Le Dinh Khoi's Portfolio",
-  image = "/icon.png",
+  image = "/icons/icon.png",
 } = Astro.props;
 ---
 
@@ -39,7 +40,7 @@ const {
     <meta charset="utf-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:image" content={image} />
     <meta title={title} />
@@ -48,9 +49,10 @@ const {
     class="max-w-screen min-h-screen dark:bg-dark-background bg-background font-custom"
   >
     <Nav client:load />
-    <section class="min-h-screen pt-20 px-4">
+    <Contact client:only="react" />
+    <main class="min-h-screen pt-16 px-4">
       <slot />
-    </section>
+    </main>
     <Footer />
   </body>
 </html>

@@ -29,7 +29,7 @@ export default function Nav() {
   return (
     <nav className="fixed w-full flex justify-between items-center p-4 backdrop-blur-lg bg-[#fafafa]/40 dark:bg-[#20202086]/40 font-custom">
       <span className="flex items-center gap-2">
-        <img src="/icon.svg" alt="Icon" width={30} height={30} />
+        <img src="/icons/icon.svg" alt="Icon" width={30} height={30} />
         <h1>LeKo</h1>
       </span>
       <ul className="md:flex gap-4 items-center hidden">
