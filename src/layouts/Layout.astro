@@ -1,7 +1,7 @@
 ---
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-import Contact from "@/components/contacts";
+import { SocialContact, EmailContact } from "@/components/contacts";
 
 const {
   title,
@@ -52,7 +52,8 @@ const {
     <main class="min-h-screen px-4">
       <slot />
     </main>
-    <Contact client:only="react" />
+    <SocialContact />
+    <EmailContact />
     <Footer />
   </body>
 </html>

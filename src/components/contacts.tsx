@@ -48,41 +48,44 @@ const FacebookIcon: React.FC<React.SVGProps<SVGSVGElement>> = ({
   </svg>
 );
 
-export default function Contact() {
+export function SocialContact() {
   return (
-    <div className="md:fixed md:bottom-0 md:px-12 flex flex-col gap-8 md:flex-row md:gap-0 justify-center md:justify-between md:items-end w-full">
-      <div className="flex md:flex-col gap-8 md:items-center justify-center h-full">
-        <div className="flex md:flex-col gap-8">
-          <a href="https://github.com/lekhoi2709" target="_blank">
-            <GitHubIcon className="hover:fill-blue-500 focus:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200" />
-          </a>
-          <a href="https://www.linkedin.com/in/ledinhkhoi/" target="_blank">
-            <LinkedInIcon className="hover:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200" />
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100006550712882"
-            target="_blank"
-          >
-            <FacebookIcon className="hover:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200" />
-          </a>
-        </div>
-        <Separator
-          orientation="vertical"
-          className="h-16 bg-current hidden md:block"
-        />
-      </div>
-      <div className="flex flex-col items-center gap-8">
-        <a
-          href="mailto:koledinleko@gmail.com"
-          className="md:[writing-mode:vertical-rl] hover:text-blue-500 hover:-translate-y-1 transition ease-in-out duration-200"
-        >
-          <p className="text-sm">koledinleko@gmail.com</p>
+    <div className="flex md:flex-col gap-8 md:items-center justify-center md:fixed md:bottom-0 md:left-14 h-fit">
+      <div className="flex md:flex-col gap-8">
+        <a href="https://github.com/lekhoi2709" target="_blank">
+          <GitHubIcon className="hover:fill-blue-500 focus:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200" />
         </a>
-        <Separator
-          orientation="vertical"
-          className="h-16 bg-current hidden md:block"
-        />
+        <a href="https://www.linkedin.com/in/ledinhkhoi/" target="_blank">
+          <LinkedInIcon className="hover:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200" />
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100006550712882"
+          target="_blank"
+        >
+          <FacebookIcon className="hover:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200" />
+        </a>
       </div>
+      <Separator
+        orientation="vertical"
+        className="h-24 bg-current hidden md:block"
+      />
+    </div>
+  );
+}
+
+export function EmailContact() {
+  return (
+    <div className="flex flex-col items-center gap-8 md:fixed md:bottom-0 md:right-14 mt-4 md:mt-0 h-fit">
+      <a
+        href="mailto:koledinleko@gmail.com"
+        className="md:[writing-mode:vertical-rl] hover:text-blue-500 hover:-translate-y-1 transition ease-in-out duration-200"
+      >
+        <p className="text-xs">koledinleko@gmail.com</p>
+      </a>
+      <Separator
+        orientation="vertical"
+        className="h-24 bg-current hidden md:block"
+      />
     </div>
   );
 }
