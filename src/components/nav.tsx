@@ -1,12 +1,14 @@
 import Switch from "./switch";
 import { useState, useEffect } from "react";
 import NavDrawer from "./nav-drawer";
+import StyledLink from "./styled-link";
 
 export default function Nav() {
   const [theme, setThemeState] = useState<boolean>(true);
   const route = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/works" },
+    { name: "Home", anchor: "home" },
+    { name: "About", anchor: "about" },
+    { name: "Experience", anchor: "experience" },
   ];
 
   useEffect(() => {
@@ -21,6 +23,7 @@ export default function Nav() {
 
   const aboutSection = document.getElementById("about");
   const homeSection = document.getElementById("greeting");
+  const experienceSection = document.getElementById("experience");
 
   const handleScroll = (type: string) => {
     if (aboutSection && type === "about") {
@@ -29,6 +32,10 @@ export default function Nav() {
 
     if (homeSection && type === "home") {
       homeSection.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (experienceSection && type === "experience") {
+      experienceSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -41,16 +48,17 @@ export default function Nav() {
       <ul className="md:flex gap-4 items-center hidden">
         {route.map((item) => (
           <li key={item.name}>
-            <button
-              onClick={() => handleScroll(item.name.toString().toLowerCase())}
-            >
+            <button onClick={() => handleScroll(item.anchor)}>
               {item.name}
             </button>
           </li>
         ))}
       </ul>
-      <div className="flex gap-4">
+      <div className="flex gap-4 items-center">
         <Switch checked={theme} setChecked={setThemeState} />
+        <StyledLink href="/Resume_Final.pdf" className="hidden md:inline-block">
+          Resume
+        </StyledLink>
         <NavDrawer />
       </div>
     </nav>
