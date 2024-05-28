@@ -15,7 +15,7 @@ export default function About() {
         />
       </div>
       <div className="flex flex-col md:flex-row w-full items-center justify-center">
-        <div className="w-full text-sm md:text-base md:max-w-[600px] bg-[#F6F6F6] dark:bg-[#2B2B2B] p-4 rounded-lg">
+        <div className="w-full text-sm md:text-base md:max-w-[600px] p-4 rounded-lg dark:text-slate-300 text-slate-600">
           <p>
             Hello! My name is Khoi, and I am{" "}
             <span className="text-blue-500">a passionate web developer</span>{" "}
