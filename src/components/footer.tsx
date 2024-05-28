@@ -8,7 +8,7 @@ export default function Footer() {
       <p>
         {THIS_YEAR} Inspired by{" "}
         <AnimateLink
-          textClassName="cursor-pointer hover:text-blue-500 text-xs"
+          textClassName="cursor-pointer hover:text-blue-500 transition duration-500 text-xs"
           underlineClassName="md:group-hover/item:bg-blue-500"
           href="https://v4.brittanychiang.com"
           target="_blank"
