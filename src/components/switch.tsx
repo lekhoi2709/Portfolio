@@ -15,7 +15,7 @@ export default function Switch({
         htmlFor="checkbox"
         className={twMerge(
           "h-8 px-1 flex items-center border border-transparent shadow-[inset_0px_0px_12px_rgba(0,0,0,0.25)] rounded-full w-[64px] relative cursor-pointer transition duration-200",
-          checked ? "bg-cyan-500" : "bg-slate-700 border-slate-500"
+          checked ? "bg-blue-500" : "bg-slate-700 border-slate-500"
         )}
       >
         <motion.div
@@ -38,7 +38,7 @@ export default function Switch({
           )}
         >
           {checked ? (
-            <Moon size={16} className="text-cyan-500" />
+            <Moon size={16} className="text-blue-500" />
           ) : (
             <Sun size={16} className="text-slate-500" />
           )}
