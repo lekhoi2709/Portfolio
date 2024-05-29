@@ -27,7 +27,7 @@ export default function Experience() {
       id="experience"
       className="w-full h-screen flex items-center justify-center"
     >
-      <div className="w-full md:max-w-[800px] flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-24">
+      <div className="w-full md:max-w-[800px] flex flex-col md:flex-row md:flex-wrap gap-12 md:gap-24">
         <div className="flex flex-col gap-8">
           <h1 className="font-title text-sm">Education</h1>
           <div className="dark:text-slate-300 text-slate-600">
@@ -38,7 +38,7 @@ export default function Experience() {
             <p>Ton Duc Thang University</p>
           </div>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4 md:gap-8">
           <h1 className="font-title text-sm">Skills</h1>
           <div className="flex flex-col gap-2 dark:text-slate-300 text-slate-600">
             {skills.map((skill) => (
@@ -55,11 +55,13 @@ export default function Experience() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4 md:gap-8">
           <h1 className="font-title text-sm">Experience</h1>
-        </div>
-        <div className="flex flex-col gap-8">
-          <h1 className="font-title text-sm">Tools</h1>
+          <div className="dark:text-slate-300 text-slate-600">
+            <p>June - December 2023</p>
+            <p className="text-cyan-500">Balan Coffee & Roastery</p>
+            <p>Web Developer</p>
+          </div>
         </div>
       </div>
     </section>
