@@ -49,5 +49,8 @@ export default {
       },
     },
   },
+  variants: {
+    fill: ["hover", "focus", "group-hover"],
+  },
   plugins: [require("tailwindcss-animate")],
 };

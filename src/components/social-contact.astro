@@ -1,0 +1,42 @@
+---
+import { Separator } from "./ui/separator";
+import githubIcon from "../../public/icons/contacts/github.svg?raw";
+import linkedinIcon from "../../public/icons/contacts/linkedin.svg?raw";
+import facebookIcon from "../../public/icons/contacts/facebook.svg?raw";
+
+const contacts = [
+  {
+    href: "https://github.com/lekhoi2709",
+    icon: githubIcon,
+    alt: "github",
+  },
+  {
+    href: "https://www.linkedin.com/in/ledinhkhoi/",
+    icon: linkedinIcon,
+    alt: "linkedin",
+  },
+  {
+    href: "https://www.facebook.com/profile.php?id=100006550712882",
+    icon: facebookIcon,
+    alt: "facebook",
+  },
+];
+---
+
+<div
+  class="flex md:flex-col gap-8 md:items-center justify-center md:fixed md:bottom-0 md:left-14 h-fit"
+>
+  <div class="flex md:flex-col gap-8">
+    {
+      contacts.map((contact) => (
+        <a href={contact.href} target="_blank">
+          <Fragment set:html={contact.icon} />
+        </a>
+      ))
+    }
+  </div>
+  <Separator
+    orientation="vertical"
+    className="h-24 bg-current hidden md:block"
+  />
+</div>
