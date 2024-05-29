@@ -9,6 +9,7 @@ export default function Nav() {
     { name: "Home", anchor: "home" },
     { name: "About", anchor: "about" },
     { name: "Experience", anchor: "experience" },
+    { name: "Projects", anchor: "projects" },
   ];
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function Nav() {
   const aboutSection = document.getElementById("about");
   const homeSection = document.getElementById("greeting");
   const experienceSection = document.getElementById("experience");
+  const projectSection = document.getElementById("projects");
 
   const handleScroll = (type: string) => {
     if (aboutSection && type === "about") {
@@ -37,6 +39,10 @@ export default function Nav() {
     if (experienceSection && type === "experience") {
       experienceSection.scrollIntoView({ behavior: "smooth" });
     }
+
+    if (projectSection && type === "projects") {
+      projectSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -48,7 +54,11 @@ export default function Nav() {
       <ul className="md:flex gap-4 items-center hidden">
         {route.map((item) => (
           <li key={item.name}>
-            <button onClick={() => handleScroll(item.anchor)}>
+            <button
+              onClick={() => handleScroll(item.anchor)}
+              className="font-bold relative group/navbtn w-fit transition duration-300 ease-in-out hover:text-blue-500"
+            >
+              <span className="w-0 h-[1px] absolute bottom-0 right-0 transition-all duration-500 md:group-hover/navbtn:w-full md:group-hover/navbtn:left-0 md:group-hover/navbtn:bg-blue-500"></span>
               {item.name}
             </button>
           </li>

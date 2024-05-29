@@ -10,6 +10,7 @@ export default function NavDrawer() {
   const aboutSection = document.getElementById("about");
   const homeSection = document.getElementById("greeting");
   const experienceSection = document.getElementById("experience");
+  const projectSection = document.getElementById("projects");
 
   const handleScroll = (type: string) => {
     setOpen(false);
@@ -30,6 +31,13 @@ export default function NavDrawer() {
         500
       );
     }
+
+    if (projectSection && type === "projects") {
+      setTimeout(
+        () => projectSection.scrollIntoView({ behavior: "smooth" }),
+        500
+      );
+    }
   };
 
   return (
@@ -44,6 +52,7 @@ export default function NavDrawer() {
           <Button onClick={() => handleScroll("home")}>Home</Button>
           <Button onClick={() => handleScroll("about")}>About</Button>
           <Button onClick={() => handleScroll("experience")}>Experience</Button>
+          <Button onClick={() => handleScroll("projects")}>Projects</Button>
           <StyledLink href="/Resume_Final.pdf">Resume</StyledLink>
         </div>
       </DrawerContent>
