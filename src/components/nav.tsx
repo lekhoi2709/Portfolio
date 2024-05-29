@@ -46,7 +46,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="fixed w-full flex justify-between items-center p-4 backdrop-blur-lg bg-[#fafafa]/40 dark:bg-[#20202086]/40 font-custom">
+    <nav className="fixed w-full flex justify-between items-center p-4 backdrop-blur-lg bg-[#fafafa]/40 dark:bg-[#20202086]/40 font-custom z-50">
       <span className="flex items-center gap-4">
         <img src="/icons/icon.svg" alt="Icon" width={30} height={30} />
         <h1 className="font-title text-xs tracking-[0.15em]">LEKO</h1>
