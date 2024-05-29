@@ -1,11 +1,67 @@
+---
+import AnimatedProject from "../animated-project.astro";
+---
+
 <section
   id="projects"
   class="w-full min-h-screen flex items-center justify-center"
 >
-  <div class="w-full md:max-w-[800px] flex flex-col">
+  <div class="w-full lg:max-w-[950px] flex flex-col gap-8 md:gap-16">
     <h1 class="text-center text-lg md:text-xl font-title font-bold">
       My Projects
     </h1>
-    <div></div>
+    <div class="w-full flex flex-col md:gap-32 gap-8">
+      <AnimatedProject
+        src="/projects/project1.png"
+        alt="Balan Coffee"
+        title="Balan Coffee & Roastery"
+        href="https://www.balancoffeeroastery.com.vn/"
+        github="https://github.com/Pet3r1512/BalanCoffeeRoastery"
+        technologies={["NextJS", "Tailwind CSS", "Framer Motion", "Prisma ORM"]}
+      >
+        <p>
+          My team and I partnered with Balan Coffee & Roastery to refresh their
+          online presence. The goal was to create a <span class="text-blue-500"
+            >modern and engaging online presence</span
+          > that reflects their commitment to quality coffee.
+        </p>
+      </AnimatedProject>
+      <AnimatedProject
+        src="/projects/project2.png"
+        direction="left"
+        alt="Mailize"
+        title="Mailize"
+        href="https://mailize.vercel.app/"
+        github="https://github.com/lekhoi2709/Mailize"
+        technologies={[
+          "NextJS",
+          "Tailwind CSS",
+          "Material-UI",
+          "ExpressJS",
+          "MongoDB",
+        ]}
+      >
+        <p>
+          A web application simulating an email service similar to Gmail, as <span
+            class="text-blue-500">a university final project.</span
+          > The application allows users to send, receive emails, and manage their
+          inbox.
+        </p>
+      </AnimatedProject>
+      <AnimatedProject
+        src="/projects/project3.png"
+        alt="CareerHub"
+        title="CareerHub"
+        href="https://carreerhub.vercel.app"
+        github="https://github.com/Pet3r1512/CareerHub"
+        technologies={["NextJS", "Tailwind CSS", "Shadcn/UI", "Prisma ORM"]}
+      >
+        <p>
+          A team project aimed at creating a LinkedIn-like platform focused on
+          browsing jobs and companies. Implementing features for job and company
+          listings, search functionality, and user profiles.
+        </p>
+      </AnimatedProject>
+    </div>
   </div>
 </section>
