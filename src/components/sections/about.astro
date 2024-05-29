@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section
+  id="about"
+  class="w-full h-screen flex flex-col gap-4 md:gap-8 items-center justify-center"
+>
+  <div class="flex gap-16 items-center">
+    <h1 class="text-center text-2xl md:text-3xl font-title font-bold">
+      About me
+    </h1>
+    <Image
+      src="/avatar.jpg"
+      alt="LDK"
+      width={96}
+      height={96}
+      class="rounded-lg border-2 border-white"
+    />
+  </div>
+  <div class="flex flex-col md:flex-row w-full items-center justify-center">
+    <div
+      class="w-full text-sm md:text-base md:max-w-[600px] p-4 rounded-lg dark:text-slate-300 text-slate-600"
+    >
+      <p>
+        Hello! My name is Khoi, and I am{" "}
+        <span class="text-blue-500">a passionate web developer</span>{" "}
+        based in Ho Chi Minh City. I am currently pursuing a degree in Software Engineering
+        at Ton Duc Thang University. With a solid foundation in software development
+        and a keen interest in web technologies, I strive to{" "}
+        <span class="text-blue-500">
+          create seamless and efficient web applications.
+        </span>
+      </p>
+      <br />
+      <p>
+        I am proficient in a variety of programming languages and frameworks,
+        including HTML, CSS, JavaScript, and React. I am also familiar with
+        back-end technologies such as Node.js and databases like MongoDB. I{" "}
+        <span class="text-blue-500"> enjoy solving complex problems </span>{" "}
+        and am always{" "}
+        <span class="text-blue-500">
+          eager to learn new technologies and techniques
+        </span>{" "}
+        to enhance my development process.
+      </p>
+    </div>
+  </div>
+</section>
