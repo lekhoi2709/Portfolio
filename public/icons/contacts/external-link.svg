@@ -1,0 +1,12 @@
+<svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class="hover:fill-blue-500 fill-current focus:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200"
+  >
+  <title>External Link</title>
+  <path d="M20 15V22H19V23H2V22H1V5H2V4H11V6H3V21H18V15H20Z" />
+  <path d="M23 1V9H21V5H20V6H19V7H18V8H17V9H16V10H15V11H14V12H13V13H12V14H11V15H10V16H9V17H7V15H8V14H9V13H10V12H11V11H12V10H13V9H14V8H15V7H16V6H17V5H18V4H19V3H15V1H23Z" />
+</svg>
