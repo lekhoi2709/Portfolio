@@ -30,7 +30,10 @@ const contacts = [
     {
       contacts.map((contact) => (
         <a href={contact.href} target="_blank">
-          <Fragment set:html={contact.icon} />
+          <Fragment
+            set:html={contact.icon}
+            class="hover:fill-blue-500 fill-current focus:fill-blue-500 hover:-translate-y-1 transition ease-in-out duration-200"
+          />
         </a>
       ))
     }
