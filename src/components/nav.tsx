@@ -58,7 +58,7 @@ export default function Nav() {
               onClick={() => handleScroll(item.anchor)}
               className="font-bold relative group/navbtn w-fit transition duration-300 ease-in-out hover:text-blue-500"
             >
-              <span className="w-0 h-[1px] absolute bottom-0 right-0 transition-all duration-500 md:group-hover/navbtn:w-full md:group-hover/navbtn:left-0 md:group-hover/navbtn:bg-blue-500"></span>
+              <span className="w-0 h-[1px] absolute bottom-0 right-0 transition-all duration-500 lg:group-hover/navbtn:w-full lg:group-hover/navbtn:left-0 lg:group-hover/navbtn:bg-blue-500"></span>
               {item.name}
             </button>
           </li>

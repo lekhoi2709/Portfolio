@@ -24,9 +24,9 @@ const contacts = [
 ---
 
 <div
-  class="flex md:flex-col gap-8 md:items-center justify-center md:fixed md:bottom-0 md:left-14 h-fit"
+  class="flex xl:flex-col gap-8 xl:items-center justify-center xl:fixed xl:bottom-0 xl:left-14 h-fit"
 >
-  <div class="flex md:flex-col gap-8">
+  <div class="flex xl:flex-col gap-8">
     {
       contacts.map((contact) => (
         <a href={contact.href} target="_blank">
@@ -40,6 +40,6 @@ const contacts = [
   </div>
   <Separator
     orientation="vertical"
-    className="h-24 bg-current hidden md:block"
+    className="h-24 bg-current hidden xl:block"
   />
 </div>

@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import { twMerge } from "tailwind-merge";
+const {
+  href,
+  src,
+  alt,
+  width = 600,
+  height = 300,
+  title,
+  direction = "right",
+  technologies = [""],
+} = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center relative">
+  <a href={href} class="">
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      class={twMerge(
+        "transition ease-in-out duration-500 saturate-0 hover:saturate-100 cursor-pointer lg:max-w-[600px] max-w-[400px] absolute top-0",
+        direction === "left" ? "right-0" : "left-0"
+      )}
+    />
+  </a>
+  <div
+    class={twMerge(
+      "max-w-[500px] z-10 flex flex-col gap-8 h-[300px] place-content-center",
+      direction === "left" ? "self-start" : "self-end"
+    )}
+  >
+    <h1
+      class={twMerge(
+        "font-bold text-lg",
+        direction === "left" ? "text-left" : "text-right"
+      )}
+    >
+      {title}
+    </h1>
+    <div
+      class="dark:bg-[#202020]/90 bg-[#fafafa]/90 px-8 py-4 rounded-sm text-sm"
+    >
+      <slot />
+    </div>
+    <div
+      class={twMerge(
+        "flex gap-4 text-xs text-slate-600 dark:text-slate-400",
+        direction === "left" ? "self-start" : "self-end"
+      )}
+    >
+      {technologies.map((tech: string) => <p>{tech}</p>)}
+    </div>
+  </div>
+</div>
