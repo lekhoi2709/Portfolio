@@ -2,7 +2,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import StyledLink from "./styled-link";
+import StyledLink from "./styled-link-button";
 
 export default function NavDrawer() {
   const [open, setOpen] = useState(false);

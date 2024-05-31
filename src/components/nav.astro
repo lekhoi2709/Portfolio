@@ -1,0 +1,60 @@
+---
+import Switch from "./mode-switch";
+import NavDrawer from "./nav-drawer";
+import StyledLink from "./styled-link-button";
+
+const route = [
+  { name: "Home", anchor: "greeting", btnId: "greetingBtn" },
+  { name: "About", anchor: "about", btnId: "aboutBtn" },
+  { name: "Experience", anchor: "experience", btnId: "experienceBtn" },
+  { name: "Projects", anchor: "projects", btnId: "projectsBtn" },
+];
+---
+
+<nav
+  class="fixed w-full flex justify-between items-center p-4 backdrop-blur-md bg-[#fafafa]/40 dark:bg-[#202020]/40 font-custom z-50"
+>
+  <span class="flex items-center gap-4">
+    <img src="/icons/icon.svg" alt="Icon" width={30} height={30} />
+    <h1 class="font-title text-xs tracking-[0.15em]">LEKO</h1>
+  </span>
+  <ul class="md:flex gap-4 items-center hidden">
+    {
+      route.map((item) => (
+        <li>
+          <button
+            id={item.btnId}
+            class="font-bold relative group/navbtn w-fit hover:text-blue-500"
+          >
+            <span class="w-0 h-[1px] absolute bottom-0 right-0 transition-all duration-300 lg:group-hover/navbtn:w-full lg:group-hover/navbtn:left-0 lg:group-hover/navbtn:bg-blue-500" />
+            {item.name}
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+  <div class="flex gap-4 items-center">
+    <Switch client:only="react" />
+    <StyledLink
+      href="/Resume_Final.pdf"
+      className="hidden md:inline-block"
+      client:only="react"
+    >
+      Resume
+    </StyledLink>
+    <NavDrawer client:only />
+  </div>
+</nav>
+
+<script is:inline define:vars={{ route }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    route.forEach((item) => {
+      const btn = document.getElementById(item.btnId);
+      const section = document.getElementById(item.anchor);
+
+      btn.addEventListener("click", () => {
+        section.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  });
+</script>

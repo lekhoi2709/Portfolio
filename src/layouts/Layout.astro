@@ -1,5 +1,5 @@
 ---
-import Nav from "../components/nav";
+import Nav from "../components/nav.astro";
 import Footer from "../components/footer.astro";
 import SocialContact from "@/components/social-contact.astro";
 import EmailContact from "@/components/email-contact.astro";
@@ -47,9 +47,9 @@ const {
     <meta title={title} />
   </head>
   <body
-    class="max-w-screen min-h-screen dark:bg-dark-background bg-background font-custom relative"
+    class="max-w-screen min-h-screen dark:bg-dark-background bg-background font-custom relative transition-colors duration-500"
   >
-    <Nav client:only="react" />
+    <Nav />
     <main class="min-h-screen px-4">
       <slot />
     </main>
