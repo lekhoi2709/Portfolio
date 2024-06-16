@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.7.0",
     "@astrojs/react": "^3.4.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.7.0",
     "@fontsource-variable/jetbrains-mono": "^5.0.21",
     "@fontsource/press-start-2p": "^5.0.20",
     "@radix-ui/react-avatar": "^1.0.4",
