@@ -10,5 +10,4 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-  output: "server",
 });
