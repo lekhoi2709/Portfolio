@@ -34,7 +34,7 @@ const {
   </a>
   <div
     class={twMerge(
-      "md:max-w-[600px] w-full h-full z-10 flex flex-col md:gap-4 lg:gap-8 gap-8 lg:max-h-[300px] md:max-h-[275px] place-content-center py-16 px-8 rounded-md md:!bg-transparent backdrop-saturate-50 backdrop-blur-sm md:backdrop-opacity-0",
+      "md:max-w-[600px] w-full h-full z-10 flex flex-col md:gap-4 lg:gap-8 gap-8 lg:max-h-[300px] md:max-h-[275px] place-content-center py-16 px-8 rounded-md md:!bg-transparent backdrop-saturate-50 backdrop-blur-sm md:backdrop-opacity-0 pointer-events-none",
       direction === "left" ? "self-start" : "self-end"
     )}
   >
@@ -47,7 +47,7 @@ const {
       {title}
     </h1>
     <div
-      class="md:dark:bg-[#202020]/90 md:bg-[#fafafa]/90 md:px-8 md:py-4 rounded-sm text-sm"
+      class="md:dark:bg-[#202020]/90 md:bg-[#fafafa]/90 md:px-8 md:py-4 rounded-sm text-sm pointer-events-none"
     >
       <slot />
     </div>
@@ -61,7 +61,7 @@ const {
     </div>
     <div
       class={twMerge(
-        "flex gap-4 text-xs text-slate-600 dark:text-slate-400",
+        "flex gap-4 text-xs text-slate-600 dark:text-slate-400 pointer-events-auto",
         direction === "left" ? "self-start" : "md:self-end"
       )}
     >
