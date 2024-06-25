@@ -1,5 +1,4 @@
 ---
-import AnimateLink from "./animation-link.astro";
 const THIS_YEAR = new Date().getFullYear();
 ---
 
@@ -7,17 +6,6 @@ const THIS_YEAR = new Date().getFullYear();
   class="h-fit p-4 font-custom flex flex-wrap items-center justify-center text-xs text-slate-500"
 >
   <p class="w-fit leading-10">
-    {THIS_YEAR} Inspired by{" "}
-    <AnimateLink
-      textClassName="cursor-pointer hover:text-blue-500 transition duration-500 text-xs"
-      underlineClassName="md:group-hover/item:bg-blue-500"
-      href="https://v4.brittanychiang.com"
-      target="_blank"
-    >
-      Brittany Chiang
-    </AnimateLink>
-    <p class="w-fit">
-      . Built by <strong>Le Dinh Khoi</strong>
-    </p>
+    {THIS_YEAR} Built by <strong>Le Dinh Khoi</strong>
   </p>
 </footer>
