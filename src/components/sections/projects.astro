@@ -12,6 +12,27 @@ import AnimatedProject from "../animated-project.astro";
     </h1>
     <div class="w-full flex flex-col md:gap-32 gap-8">
       <AnimatedProject
+        direction="left"
+        src="/projects/project3.png"
+        alt="Lumen"
+        title="Lumen"
+        href="https://lumen-omega.vercel.app/"
+        github="https://github.com/lekhoi2709/Lumen"
+        technologies={[
+          "ReactJS",
+          "Tailwind CSS",
+          "ExpressJS",
+          "TanStack Query",
+        ]}
+      >
+        <p>
+          Lumen is a web-based Learning Management System (LMS) built with
+          React, TypeScript, ExpressJS, MongoDB, and Supabase. It provides a
+          platform for educators to create and manage courses, and for students
+          to access and complete course materials.
+        </p>
+      </AnimatedProject>
+      <AnimatedProject
         src="/projects/project1.png"
         alt="Balan Coffee"
         title="Balan Coffee & Roastery"
@@ -46,20 +67,6 @@ import AnimatedProject from "../animated-project.astro";
             class="text-blue-500">a university final project.</span
           > The application allows users to send, receive emails, and manage their
           inbox.
-        </p>
-      </AnimatedProject>
-      <AnimatedProject
-        src="/projects/project3.png"
-        alt="CareerHub"
-        title="CareerHub"
-        href="https://carreerhub.vercel.app"
-        github="https://github.com/Pet3r1512/CareerHub"
-        technologies={["NextJS", "Tailwind CSS", "Shadcn/UI", "Prisma ORM"]}
-      >
-        <p>
-          A team project aimed at creating a LinkedIn-like platform focused on
-          browsing jobs and companies. Implementing features for job and company
-          listings, search functionality, and user profiles.
         </p>
       </AnimatedProject>
     </div>
